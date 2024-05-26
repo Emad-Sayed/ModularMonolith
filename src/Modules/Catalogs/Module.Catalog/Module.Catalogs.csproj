@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Modules.Catalog.Application\Modules.Catalog.Application.csproj" />
-    <ProjectReference Include="..\Modules.Catalog.Infrastructure\Modules.Catalog.Infrastructure.csproj" />
+    <ProjectReference Include="..\Modules.Catalog.Application\Modules.Catalogs.Application.csproj" />
+    <ProjectReference Include="..\Modules.Catalog.Infrastructure\Modules.Catalogs.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

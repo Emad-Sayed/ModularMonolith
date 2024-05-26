@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Modules.Catalogs.Domain
 {
-    public interface ICatalogRepository
+
+    public interface IUnitOfWork : IDisposable
     {
-        Task<bool> AddCatalogAsync(Catalog catalog);
+        Task<bool> SaveEntitiesAsync(CancellationToken cancellationToken = default(CancellationToken));
     }
 }

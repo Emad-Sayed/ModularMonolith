@@ -15,6 +15,14 @@ namespace Modules.Catalogs.Infrastructure
         {
             _context = context;
         }
+        public IUnitOfWork UnitOfWork
+        {
+            get
+            {
+                return _context;
+            }
+        }
+
         public async Task<bool> AddCatalogAsync(Catalog catalog)
         {
             await _context.Catalogs.AddAsync(catalog);

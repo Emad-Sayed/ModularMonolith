@@ -11,21 +11,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{1F4B269C-D86
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{9F707135-E994-436A-BE52-BAF6C4DA4E74}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{4FAD2E5E-32D6-468E-967F-73FE6980E1E2}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalogs", "Catalogs", "{4FAD2E5E-32D6-468E-967F-73FE6980E1E2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Users", "Users", "{6AAD952C-64D0-46FA-832C-0B0B88B3ED75}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ticker", "Ticker", "{C5A3957F-D1E9-486A-B82B-C504F9332AD1}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tickets", "Tickets", "{C5A3957F-D1E9-486A-B82B-C504F9332AD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modules.Catalog.Domain", "src\Modules\Catalog\Modules.Catalog.Domain\Modules.Catalog.Domain.csproj", "{A701089F-D484-409D-A18C-608D5ADE01D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modules.Catalogs.Domain", "src\Modules\Catalogs\Modules.Catalog.Domain\Modules.Catalogs.Domain.csproj", "{A701089F-D484-409D-A18C-608D5ADE01D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modules.Catalog.Infrastructure", "src\Modules\Catalog\Modules.Catalog.Infrastructure\Modules.Catalog.Infrastructure.csproj", "{94F4CA6A-7261-4DC0-883F-9E4AB1029901}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modules.Catalogs.Infrastructure", "src\Modules\Catalogs\Modules.Catalog.Infrastructure\Modules.Catalogs.Infrastructure.csproj", "{94F4CA6A-7261-4DC0-883F-9E4AB1029901}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modules.Catalog.Application", "src\Modules\Catalog\Modules.Catalog.Application\Modules.Catalog.Application.csproj", "{DB81E8D2-D231-4EC0-939F-4CF87F13A637}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modules.Catalogs.Application", "src\Modules\Catalogs\Modules.Catalog.Application\Modules.Catalogs.Application.csproj", "{DB81E8D2-D231-4EC0-939F-4CF87F13A637}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{AF8F6002-B9E4-4029-850F-FEE475218CA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module.Catalog", "src\Modules\Catalog\Module.Catalog\Module.Catalog.csproj", "{3195636C-F01C-4C66-8520-A00FC7362897}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module.Catalogs", "src\Modules\Catalogs\Module.Catalog\Module.Catalogs.csproj", "{3195636C-F01C-4C66-8520-A00FC7362897}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
