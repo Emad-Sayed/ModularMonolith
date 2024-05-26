@@ -13,12 +13,11 @@ namespace Modules.Catalogs.Domain
         {
             _catalogRepository = catalogRepository;
         }
-        public async Task<Catalog> AddCatalog(string name)
+        public async Task<Catalog> AddCatalogAsync(string name)
         {
             var id = Guid.NewGuid();
             var catalog = new Catalog(id, name);
             await _catalogRepository.AddCatalogAsync(catalog);
-            await _catalogRepository.UnitOfWork.SaveEntitiesAsync();
             return catalog;
         }
     }

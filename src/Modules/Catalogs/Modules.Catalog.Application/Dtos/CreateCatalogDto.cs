@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Modules.Catalogs.Application.Commands
+namespace Modules.Catalogs.Application.Dtos
 {
-    public class CreateCatalogCommand
+    public class CreateCatalogDto
     {
         public string Name { get; set; }
     }

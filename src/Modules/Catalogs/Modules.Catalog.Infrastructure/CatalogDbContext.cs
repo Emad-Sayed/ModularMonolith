@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Modules.Catalogs.Infrastructure
 {
-    public class CatalogDbContext : DbContext, IUnitOfWork
+    public class CatalogDbContext : DbContext
     {
         private readonly IMediator _mediator;
         public CatalogDbContext(DbContextOptions<CatalogDbContext> options, IMediator mediator) : base(options)

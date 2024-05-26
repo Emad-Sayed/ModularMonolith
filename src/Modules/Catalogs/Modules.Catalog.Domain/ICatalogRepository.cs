@@ -8,7 +8,6 @@ namespace Modules.Catalogs.Domain
 {
     public interface ICatalogRepository
     {
-        IUnitOfWork UnitOfWork { get; }
         Task<bool> AddCatalogAsync(Catalog catalog);
     }
 }
