@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Modules.Catalogs.Application.Dtos
 {
-    public class CreateCatalogDto
+    public class CatalogDto
     {
+        public Guid Id { get; set; }
         public string Name { get; set; }
     }
 }

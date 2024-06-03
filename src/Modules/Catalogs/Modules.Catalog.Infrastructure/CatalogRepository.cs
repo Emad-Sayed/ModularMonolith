@@ -1,4 +1,5 @@
-﻿using Modules.Catalogs.Domain;
+﻿using Microsoft.EntityFrameworkCore;
+using Modules.Catalogs.Domain;
 using Modules.Catalogs.Infrastructure;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,11 @@ namespace Modules.Catalogs.Infrastructure
         {
             await _context.Catalogs.AddAsync(catalog);
             return true;
+        }
+
+        public async Task<Catalog> GetCatalogAggregateRootAsync(Guid id)
+        {
+            return await _context.Catalogs.FirstOrDefaultAsync(c => c.Id == id);
         }
     }
 }

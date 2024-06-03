@@ -1,4 +1,5 @@
 using Module.Catalogs;
+using Module.Shared;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +12,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddCatalogServices(builder.Configuration.GetConnectionString("CatalogConnection"));
+builder.Services.AddSharedServices(builder.Configuration);
 
 var app = builder.Build();
 

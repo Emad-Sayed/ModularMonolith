@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Modules\Catalogs\Module.Catalog\Module.Catalogs.csproj" />
+    <ProjectReference Include="..\..\Shared\Module.Shared\Module.Shared.csproj" />
   </ItemGroup>
 
 </Project>

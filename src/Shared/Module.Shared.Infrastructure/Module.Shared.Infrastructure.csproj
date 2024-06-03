@@ -7,12 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Shared\Module.Shared.Application\Module.Shared.Application.csproj" />
-    <ProjectReference Include="..\Modules.Catalog.Domain\Modules.Catalogs.Domain.csproj" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="IntegrationEventHandlers\" />
+    <ProjectReference Include="..\Module.Shared.Application\Module.Shared.Application.csproj" />
   </ItemGroup>
 
 </Project>

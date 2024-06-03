@@ -1,11 +1,8 @@
-﻿using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Modules.Catalogs.Application;
 using Modules.Catalogs.Application.Commands.AddCatalog;
 using Modules.Catalogs.Domain;
 using Modules.Catalogs.Infrastructure;
-using System.Reflection;
 
 namespace Module.Catalogs
 {

@@ -9,5 +9,6 @@ namespace Modules.Catalogs.Domain
     public interface ICatalogRepository
     {
         Task<bool> AddCatalogAsync(Catalog catalog);
+        Task<Catalog> GetCatalogAggregateRootAsync(Guid id);
     }
 }

@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Modules.Catalogs.Application;
 using Modules.Catalogs.Application.Commands.AddCatalog;
 using Modules.Catalogs.Application.Dtos;
+using Modules.Catalogs.Application.Queries.GetCatalogQuery;
 
 
 namespace Module.Catalog.Controllers
@@ -24,10 +25,16 @@ namespace Module.Catalog.Controllers
         }
 
         [HttpPost]
-        public async Task<bool> CreateCatalog(CreateCatalogDto command)
+        public async Task<CatalogDto> CreateCatalog(CatalogDto command)
         {
-            await _mediatR.Send(new CreateCatalogCommand(command.Name));
-            return true;
+            var createdCatalog = await _mediatR.Send(new CreateCatalogCommand(command.Name));
+            return createdCatalog;
+        }
+        [HttpGet]
+        public async Task<CatalogDto> GetCatalog([FromQuery] Guid id)
+        {
+            var selectedCatalog = await _mediatR.Send(new GetCatalogQuery(id));
+            return selectedCatalog;
         }
     }
 
