@@ -1,4 +1,4 @@
-namespace ModularMonolith
+namespace TicketingHub
 {
     public class WeatherForecast
     {
