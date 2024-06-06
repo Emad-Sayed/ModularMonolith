@@ -25,7 +25,7 @@ namespace Module.Shared
             {
                 services.AddDistributedMemoryCache();
             }
-            services.AddSingleton(typeof(IBussinessDistributedCache<>), typeof(BussinessDistributedCache<>));
+            services.AddSingleton<IBussinessDistributedCache, BussinessDistributedCache>();
         }
     }
 }

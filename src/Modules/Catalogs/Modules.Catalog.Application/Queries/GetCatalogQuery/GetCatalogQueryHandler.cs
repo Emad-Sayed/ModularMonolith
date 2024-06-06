@@ -14,9 +14,9 @@ namespace Modules.Catalogs.Application.Queries.GetCatalogQuery
     public class GetCatalogQueryHandler : IRequestHandler<GetCatalogQuery, CatalogDto>
     {
         public readonly ICatalogRepository _rep;
-        public readonly IBussinessDistributedCache<Catalog> _cache;
+        public readonly IBussinessDistributedCache _cache;
 
-        public GetCatalogQueryHandler(IBussinessDistributedCache<Catalog> cache, ICatalogRepository rep)
+        public GetCatalogQueryHandler(IBussinessDistributedCache cache, ICatalogRepository rep)
         {
             _cache = cache;
             _rep = rep;
@@ -25,7 +25,7 @@ namespace Modules.Catalogs.Application.Queries.GetCatalogQuery
         public async Task<CatalogDto> Handle(GetCatalogQuery request, CancellationToken cancellationToken)
         {
             Catalog catalogItem;
-            catalogItem = await _cache.GetItemAsync(request.Id.ToString());
+            catalogItem = await _cache.GetItemAsync<Catalog>(request.Id.ToString());
 
             if (catalogItem == null)
             {

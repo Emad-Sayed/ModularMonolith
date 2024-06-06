@@ -4,7 +4,7 @@ using System.Text.Json;
 
 namespace Module.Shared.Infrastructure.Cache
 {
-    public class BussinessDistributedCache<T> : IBussinessDistributedCache<T> where T : class
+    public class BussinessDistributedCache : IBussinessDistributedCache
     {
         public readonly IDistributedCache _distributedCache;
 
@@ -13,18 +13,15 @@ namespace Module.Shared.Infrastructure.Cache
             _distributedCache = distributedCache;
         }
 
-        public async Task<T> GetItemAsync(string key)
+        public async Task<T> GetItemAsync<T>(string key)
         {
             var cachedData = await _distributedCache.GetStringAsync(key);
             if (string.IsNullOrEmpty(cachedData))
-            {
-                return null;
-            }
-
+                return default;
             return JsonSerializer.Deserialize<T>(cachedData);
         }
 
-        public async Task SetItemAsync(string key, T item)
+        public async Task SetItemAsync<T>(string key, T item)
         {
             var serializedData = JsonSerializer.Serialize(item);
             await _distributedCache.SetStringAsync(key, serializedData);

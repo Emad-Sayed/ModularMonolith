@@ -9,11 +9,11 @@ namespace Modules.Catalogs.Application.Commands.AddCatalog
     {
         private readonly IUnitOfWork _uow;
         private readonly CatalogDomainService _catalogDomainService;
-        public readonly IBussinessDistributedCache<Catalog> _cache;
+        public readonly IBussinessDistributedCache _cache;
 
         public CreateCatalogCommandHandler(CatalogDomainService catalogDomainService,
             IUnitOfWork uow,
-            IBussinessDistributedCache<Catalog> cache)
+            IBussinessDistributedCache cache)
         {
             _catalogDomainService = catalogDomainService;
             _uow = uow;
