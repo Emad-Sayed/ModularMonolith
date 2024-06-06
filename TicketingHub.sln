@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModularMonolith", "src\API\ModularMonolith\ModularMonolith.csproj", "{CC5DD65E-B753-40CC-81F0-62159A11BF32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketingHub", "src\API\TicketingHub\TicketingHub.csproj", "{CC5DD65E-B753-40CC-81F0-62159A11BF32}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A591EED8-2B8A-49C4-824F-7479AC71E4B9}"
 EndProject

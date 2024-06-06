@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace ModularMonolith.Controllers
+namespace TicketingHub.Controllers
 {
     [ApiController]
     [Route("[controller]")]
