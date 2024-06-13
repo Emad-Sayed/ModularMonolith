@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Modules\Catalogs\Module.Catalog\Module.Catalogs.csproj" />
+    <ProjectReference Include="..\..\Modules\Catalogs\Module.Catalogs\Module.Catalogs.csproj" />
     <ProjectReference Include="..\..\Shared\Module.Shared\Module.Shared.csproj" />
   </ItemGroup>
 

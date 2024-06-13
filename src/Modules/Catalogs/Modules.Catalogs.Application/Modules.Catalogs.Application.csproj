@@ -7,12 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Shared\Module.Shared.Application\Module.Shared.Application.csproj" />
-    <ProjectReference Include="..\Modules.Catalog.Domain\Modules.Catalogs.Domain.csproj" />
+    <Folder Include="IntegrationEventHandlers\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="IntegrationEventHandlers\" />
+    <ProjectReference Include="..\..\..\Shared\Module.Shared.Application\Module.Shared.Application.csproj" />
+    <ProjectReference Include="..\Modules.Catalogs.Domain\Modules.Catalogs.Domain.csproj" />
   </ItemGroup>
 
 </Project>
