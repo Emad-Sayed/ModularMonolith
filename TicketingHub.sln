@@ -17,11 +17,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Users", "Users", "{6AAD952C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tickets", "Tickets", "{C5A3957F-D1E9-486A-B82B-C504F9332AD1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modules.Catalogs.Domain", "src\Modules\Catalogs\Modules.Catalogs.Domain\Modules.Catalogs.Domain.csproj", "{A701089F-D484-409D-A18C-608D5ADE01D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module.Catalogs.Domain", "src\Modules\Catalogs\Module.Catalogs.Domain\Module.Catalogs.Domain.csproj", "{A701089F-D484-409D-A18C-608D5ADE01D7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modules.Catalogs.Infrastructure", "src\Modules\Catalogs\Modules.Catalogs.Infrastructure\Modules.Catalogs.Infrastructure.csproj", "{94F4CA6A-7261-4DC0-883F-9E4AB1029901}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module.Catalogs.Infrastructure", "src\Modules\Catalogs\Module.Catalogs.Infrastructure\Module.Catalogs.Infrastructure.csproj", "{94F4CA6A-7261-4DC0-883F-9E4AB1029901}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modules.Catalogs.Application", "src\Modules\Catalogs\Modules.Catalogs.Application\Modules.Catalogs.Application.csproj", "{DB81E8D2-D231-4EC0-939F-4CF87F13A637}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module.Catalogs.Application", "src\Modules\Catalogs\Module.Catalogs.Application\Module.Catalogs.Application.csproj", "{DB81E8D2-D231-4EC0-939F-4CF87F13A637}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{AF8F6002-B9E4-4029-850F-FEE475218CA7}"
 EndProject
@@ -33,7 +33,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module.Shared.Infrastructur
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module.Shared.Application", "src\Shared\Module.Shared.Application\Module.Shared.Application.csproj", "{E1888BD0-F904-4F3B-B35C-FA8EF760143C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module.Catalogs.Tests", "src\Modules\Catalogs\Module.Catalogs.Tests\Module.Catalogs.Tests.csproj", "{184E85F5-490F-48EC-9DFC-BC8B9390272E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module.Catalogs.Tests", "src\Modules\Catalogs\Module.Catalogs.Tests\Module.Catalogs.Tests.csproj", "{184E85F5-490F-48EC-9DFC-BC8B9390272E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
