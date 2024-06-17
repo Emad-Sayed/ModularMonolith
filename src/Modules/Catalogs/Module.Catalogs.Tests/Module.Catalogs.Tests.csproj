@@ -17,7 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Module.Catalogs.Application\Module.Catalogs.Application.csproj" />
     <ProjectReference Include="..\Module.Catalogs.Domain\Module.Catalogs.Domain.csproj" />
+    <ProjectReference Include="..\Module.Catalogs.Infrastructure\Module.Catalogs.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

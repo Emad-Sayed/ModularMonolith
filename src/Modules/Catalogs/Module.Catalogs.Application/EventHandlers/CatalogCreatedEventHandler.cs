@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.Extensions.Logging;
 using Modules.Catalogs.Domain.Events;
 using System;
 using System.Collections.Generic;
@@ -11,13 +12,15 @@ namespace Modules.Catalogs.Application.EventHandlers
 {
     public class CatalogCreatedEventHandler : INotificationHandler<CatalogCreated>
     {
-
-        public CatalogCreatedEventHandler()
+        private readonly ILogger<CatalogCreatedEventHandler> _logger;
+        public CatalogCreatedEventHandler(ILogger<CatalogCreatedEventHandler> logger)
         {
+            _logger = logger;
         }
 
         public async Task Handle(CatalogCreated notification, CancellationToken cancellationToken)
         {
+            _logger.LogInformation("catalog created event handler executed for catalog {name}", notification.Name);
         }
     }
 }
