@@ -30,22 +30,25 @@ namespace Modules.Catalogs.Infrastructure
             await _mediator.DispatchCatalogDomainEventsAsync(this);
 
 
-            //foreach (var entry in ChangeTracker.Entries<AggregateRoot<>>())
-            //{
-            //    switch (entry.State)
-            //    {
-            //        case EntityState.Added:
-            //            entry.Entity.CreatedBy = _currentUserService.Name;
-            //            entry.Entity.Created = DateTime.UtcNow;
-            //            break;
-            //        case EntityState.Modified:
-            //            entry.Entity.LastModifiedBy = _currentUserService.Name;
-            //            entry.Entity.LastModified = DateTime.UtcNow;
-            //            break;
-            //    }
-            //}
+            foreach (var entry in ChangeTracker.Entries<AggregateRoot>())
+            {
+                switch (entry.State)
+                {
+                    case EntityState.Added:
+                        entry.Entity.CreatedBy = "";
+                        entry.Entity.CreatedAt = DateTime.UtcNow;
+                        break;
+                    case EntityState.Modified:
+                        entry.Entity.LastModifiedBy = "";
+                        entry.Entity.LastModifiedAt = DateTime.UtcNow;
+                        break;
+                }
+            }
 
             await base.SaveChangesAsync(cancellationToken);
+
+            await _mediator.DispatchCatalogIntegrationEventsAsync(this);
+
 
             return true;
         }
