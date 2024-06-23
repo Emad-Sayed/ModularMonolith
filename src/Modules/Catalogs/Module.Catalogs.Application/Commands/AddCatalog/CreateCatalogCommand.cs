@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Module.Shared.Application.Intefaces.UnitOfWork;
 using Modules.Catalogs.Application.Dtos;
 using Modules.Catalogs.Domain;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Modules.Catalogs.Application.Commands.AddCatalog
 {
-    public record CreateCatalogCommand : IRequest<CatalogDto>
+    public record CreateCatalogCommand : IRequest<CatalogDto> , IUnitOfWorkCommand
     {
         public CreateCatalogCommand(string name)
         {

@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Shared\Module.Shared.Application\Module.Shared.Application.csproj" />
     <ProjectReference Include="..\Module.Catalogs.Domain\Module.Catalogs.Domain.csproj" />
   </ItemGroup>
 

@@ -1,4 +1,5 @@
-﻿using Modules.Catalogs.Domain;
+﻿using Module.Shared.Application.Intefaces.UnitOfWork;
+using Modules.Catalogs.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,10 +22,15 @@ namespace Modules.Catalogs.Infrastructure
             await _context.SaveEntitiesAsync(cancellationToken);
             return true;
         }
-
+        public bool HasChanges()
+        {
+            return _context.ChangeTracker.HasChanges();
+        }
         public void Dispose()
         {
             _context.Dispose();
         }
+
+
     }
 }

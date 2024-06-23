@@ -1,6 +1,8 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using MediatR;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Module.Shared.Application.Cache.Intefaces;
+using Module.Shared.Application.CommandPipelines;
 using Module.Shared.Infrastructure.Cache;
 
 namespace Module.Shared
@@ -26,6 +28,11 @@ namespace Module.Shared
                 services.AddDistributedMemoryCache();
             }
             services.AddSingleton<IBussinessDistributedCache, BussinessDistributedCache>();
+
+            services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(CommandUnitOfWork<,>).Assembly));
+
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(CommandUnitOfWork<,>));
+
         }
     }
 }

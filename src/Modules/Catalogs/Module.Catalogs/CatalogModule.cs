@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Module.Shared.Application.Intefaces.UnitOfWork;
 using Modules.Catalogs.Application.Commands.AddCatalog;
 using Modules.Catalogs.Domain;
 using Modules.Catalogs.Infrastructure;
